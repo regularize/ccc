@@ -81,9 +81,9 @@ Given the outputs of the clustering (see class `Groups`), namely two disjoint su
 - aggregating each of these two  3-dimensional tensors into a 2-dimensional matrix, say by applying a (weighted) summation along the 'components' dimension,
 - then, using these two matrices as x and y values (possibly their logarithm), to create a trajectory (across checkpoints) for each coordinate.
 
-<center>
-<img src="assets/images/figs_OLMo-1B_full_lengths-weighted/ccci_viz_trajectories_300.png" alt="fig - sample plot" width="500" title="Trajectories for 2048 coordinates, over 50 checkpoints, where the x and y value for each coordinate-checkpoint comes from aggregation of all parameters in the corresponding groups, depicted by blue and red squares. The ignored components are marked by an x in a white background."/>
-</center>
+<p align="center">
+    <img src="assets/images/figs_OLMo-1B_full_lengths-weighted/ccci_viz_trajectories_300.png" alt="fig - sample plot" width="500" title="Trajectories for 2048 coordinates, over 50 checkpoints, where the x and y value for each coordinate-checkpoint comes from aggregation of all parameters in the corresponding groups, depicted by blue and red squares. The ignored components are marked by an x in a white background."/>
+</p>
 
 In the above, 
 - the top-left subplot depicts the *inlier* trajectories (where the 'mean' trajectory is in a gradient-red color); 
@@ -99,30 +99,30 @@ Note that the 'elbow' in the above is rather superficial; the `OLMo-1B` checkpoi
 
 Here are a couple more examples:
 
-<center>
+<p align="center">
 <img src="assets/images/figs_OLMo-1B_full_lengths-weighted/ccci_viz_trajectories_213.png" alt="fig - random grouping - 1" width="250" title=""/>
 <img src="assets/images/figs_OLMo-1B_full_lengths-weighted/ccci_viz_trajectories_246.png" alt="fig - random grouping - 2" width="250" title=""/>
-</center>
+</p>
 
 Each of the above plots are the result of a specific component grouping and outlier identification approach (a specific instance of `Group`) and have low 'scores' (defined later). 
 Compare the above plots with the following ones in which components have been assigned to the two groups at *random*: 
 
-<center>
+<p align="center">
 <img src="assets/images/figs_OLMo-1B_full_lengths-weighted/ccci_viz_trajectories_21.png" alt="fig - random grouping - 1" width="250" title="Random component groups."/>
 <img src="assets/images/figs_OLMo-1B_full_lengths-weighted/ccci_viz_trajectories_22.png" alt="fig - random grouping - 2" width="250" title="Random component groups."/>
-</center>
+</p>
 
 The following plot has `emb` in one group and all other components in the other; 
 
-<center>
+<p align="center">
 <img src="assets/images/figs_OLMo-1B_full_lengths-weighted/ccci_viz_trajectories_262.png" alt="fig - emb only" width="250" title="emb in one group by itself."/>
-</center>
+</p>
 
 ## 1-D Trajectories?
 To observe the importance of two-dimensional plotting, and more specifically the aforementioned 'clustering model' that there exists two types of components, consider the following 1-dimensional plot, in which we aggregate all components (instead of aggregating within each of the two groups of components).  
-<center>
+<p align="center">
 <img src="assets/images/figs_OLMo-1B_full_lengths-weighted/ccci_viz_agg1d.png" alt="fig - emb only" width="250" title="emb in one group by itself."/>
-</center>
+</p>
 
 While some coordinate trajectories could be identified as outliers based on this plot, a lot more information could be gleaned from the 2-D plots; see the subsequent discussions. 
 
@@ -139,9 +139,9 @@ This creates a score (a pair of numbers) for each clustering result, which could
 - for validating 'models' for the clusteredness properties of our data. 
 Interestingly, we find that the groupings and outlier sets identified through the aforementioned tensor clustering methods have low scores compared to random groupings or ad-hoc approaches, which **serves as support for our 'clusteredness model' of the data.** Here is a plot of the scores for the 301 experiments (that could be divided into 6 types): 
 
-<center>
+<p align="center">
 <img src="assets/images/figs_OLMo-1B_full_lengths-weighted/ccci_viz_scores.png" alt="fig - scores" width="500" title="scores for 301 experiments."/>
-</center>
+</p>
 
 
 ## How could these classification and plots be useful?
@@ -183,26 +183,26 @@ See `assets` for other types of plots for these experiments.
 
 ## `OLMo-1B` in 'compact' mode (7 components)
 
-<center>
+<p align="center">
 <img src="assets/images/figs_OLMo-1B_compact_lengths-weighted/ccci_viz_trajectories_72.png" alt="" width="250" title=""/>
 <img src="assets/images/figs_OLMo-1B_compact_lengths-weighted/ccci_viz_trajectories_85.png" alt="" width="250" title=""/>
 <img src="assets/images/figs_OLMo-1B_compact_lengths-weighted/ccci_viz_trajectories_247.png" alt="" width="250" title=""/>
-</center>
+</p>
 
 
 ## A variant of `codeparrot` in `compact` mode
 
-<center>
+<p align="center">
 <img src="assets/images/figs_codeparrot_compact/CSCI_viz_trajectories_3.png" alt="" width="250" title=""/>
 <img src="assets/images/figs_codeparrot_compact/CSCI_viz_trajectories_4.png" alt="" width="250" title=""/>
 <img src="assets/images/figs_codeparrot_compact/CSCI_viz_trajectories_14.png" alt="" width="250" title=""/>
 <img src="assets/images/figs_codeparrot_compact/CSCI_viz_trajectories_262.png" alt="" width="250" title=""/>
 <img src="assets/images/figs_codeparrot_compact/CSCI_viz_trajectories_286.png" alt="" width="250" title=""/>
-</center>
+</p>
 
 ## A modified decoder-only transformer
 
-<center>
+<p align="center">
 <img src="assets/images/figs-2200/CSCI_viz_trajectories_149.png" alt="" width="250" title=""/>
 <img src="assets/images/figs-2200/CSCI_viz_trajectories_162.png" alt="" width="250" title=""/>
 
@@ -212,6 +212,6 @@ See `assets` for other types of plots for these experiments.
 
 <img src="assets/images/figs-2200/CSCI_viz_trajectories_262.png" alt="" width="250" title=""/>
 <img src="assets/images/figs-2200/CSCI_viz_trajectories_263.png" alt="" width="250" title=""/>
-</center>
+</p>
 
 
