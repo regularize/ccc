@@ -76,7 +76,7 @@ In using this model for clustering, we could rely on biclustering for specific c
 
 ## The 2-D Trajectories
 
-Given the outputs of the clustering (see class `Groups`), namely two disjont subsets of the coordinates and two subsets of the components, we can then generate plots similar to the following, via
+Given the outputs of the clustering (see class `Groups`), namely two disjoint subsets of the coordinates and two subsets of the components, we can then generate plots similar to the following, via
 - first splitting the 3-dimensional tensor into two tensors, based on the two components groups,
 - aggregating each of these two  3-dimensional tensors into a 2-dimensional matrix, say by applying a (weighted) summation along the 'components' dimension,
 - then, using these two matrices as x and y values (possibly their logarithm), to create a trajectory (across checkpoints) for each coordinate.
