@@ -4,7 +4,7 @@ A solution for understanding **C**oordinates, across **C**heckpoints and **C**om
 
 We provide various visualization routines, and importantly, an interesting way to identify **component groups** and **outlier coordinates** in a model and track the trajectory of training. 
 
-The code was originally developed as a monitoring and analysis tool (especially, for certain **mechanistic interpretability** purposes, as well as efforts to **train networks that will be mechanistically interpretable**) for neural network architectures in which a persistent notion of a 'coordinate' throughout the network exists. However, it's application to Transformers (in which MLPs 'mix up' the coordinates) could still provide useful insights and questions. We elaborate on some use cases for this analysis (via `ccc`) in a later [section]().
+The code was originally developed as a monitoring and analysis tool (especially, for certain **mechanistic interpretability** purposes, as well as efforts to **train networks that will be mechanistically interpretable**) for neural network architectures in which a persistent notion of a 'coordinate' throughout the network exists. However, it's application to Transformers (in which MLPs 'mix up' the coordinates) could still provide useful insights and questions. We elaborate on some use cases for this analysis (via `ccc`) in a later section.
 
 
 In summary, we provide 
