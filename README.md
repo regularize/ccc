@@ -39,7 +39,7 @@ graph TD;
 
 ## Usage
 
-Data loaders for the [Pythia suite](https://github.com/EleutherAI/pythia) and the [OLMo suite](https://github.com/allenai/OLMo) are included in this repository. Therefore, the experiments for Pythia and OLMo can be run, to generate the plots, using 
+Data loaders for the [Pythia suite](https://github.com/EleutherAI/pythia) and the [OLMo suite](https://github.com/allenai/OLMo) are included in this repository. Therefore, the experiments for Pythia and OLMo can be run, in Python 3.10+, to generate the plots, using 
 ```
 python main.py
 ```
