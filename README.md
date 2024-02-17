@@ -136,11 +136,22 @@ Note how the two scores are inversely correlated when the component groups are f
 This creates a score (a pair of numbers) for each clustering result, which could serve several purposes; e.g.,  
 - for *finding* clusterings that lead to 2-D trajectories with minimal scores, as an alternative to tensor clustering. We experimented with a few 'set optimization' algorithms but leave an effective implementation to future work.
 - for validating 'models' for the clusteredness properties of our data. 
-Interestingly, we find that the groupings and outlier sets identified through the aforementioned tensor clustering methods have low scores compared to random groupings or ad-hoc approaches, which **serves as support for our 'clusteredness model' of the data.** Here is a plot of the scores for the 301 experiments (that could be divided into 6 types): 
+Interestingly, we find that the groupings and outlier sets identified through the aforementioned tensor clustering methods have low scores (i.e., aside from *a few* outlier coordinates, the other coordinate trajectories are rather *regular*) compared to random groupings or ad-hoc approaches, which **serves as support for our 'clusteredness model' of the data.** Here is a plot of the scores for the 301 experiments (that could be divided into 6 types): 
 
 <p align="center">
 <img src="assets/images/figs_OLMo-1B_full_lengths-weighted/ccci_viz_scores.png" alt="fig - scores" width="500" title="scores for 301 experiments."/>
 </p>
+
+As yet another examination of the clusteredness of the 3-d tensor, we can compare the component grouping and coordinate grouping across the 301 experiments:
+
+<p align="center">
+<img src="assets/images/figs_OLMo-1B_full_lengths-weighted/ccci_viz_outliers_indic.png" alt="fig - scores" width="250" title="scores for 301 experiments."/>
+<img src="assets/images/figs_OLMo-1B_full_lengths-weighted/ccci_viz_outliers_gram.png" alt="fig - scores" width="250" title="scores for 301 experiments."/>
+<img src="assets/images/figs_OLMo-1B_full_lengths-weighted/ccci_viz_components_gram.png" alt="fig - scores" width="250" title="scores for 301 experiments."/>
+</p>
+Each row in the left plot corresponds to one experiment and depicts the $\pm 1$ vector for inlier/outliers in said experiment. 
+The plot in the middle is simply the Gram matrix for the previous one. 
+The plot on the right is the Gram matrix for the $\pm 1$ indictor vectors for the two identified 'components' in the corresponding experiment.  
 
 
 ## How could these classification and plots be useful?
